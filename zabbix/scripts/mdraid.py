@@ -84,8 +84,7 @@ def parse_lines(lines):
             for member in m.group('member_status'):
                 if member == 'U':
                     current['active'] = current['active'] + 1
-
-                if member == '_':
+                else:
                     current['inactive'] = current['inactive'] + 1
 
             entries.append(current)
